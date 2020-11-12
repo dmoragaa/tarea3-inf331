@@ -1,0 +1,27 @@
+2020-11-12 18:00:21.685882,   IMG control: monday.png,  IMG prueba: monday1.jpeg
+Resultado: True
+---------------------------------------------------------------------------------------------
+2020-11-12 18:03:56.964343,   IMG control: monday.png,  IMG prueba: monday2.jpeg
+La detección de la palabra smleng en la imagen de prueba es menor a 97% 
+--------------------------------------------------------------------------------------------- 
+2020-11-12 18:04:46.428633,   IMG control: monday.png,  IMG prueba: monday3.jpeg
+La detección de la palabra KEEP en la imagen de prueba es menor a 97% 
+--------------------------------------------------------------------------------------------- 
+2020-11-12 18:05:44.219738,   IMG control: monday.png,  IMG prueba: monday4.jpeg
+La detección de la palabra epositokooe IT'S en la imagen de prueba es menor a 97% 
+--------------------------------------------------------------------------------------------- 
+2020-11-12 18:07:39.266990,   IMG control: monday.png,  IMG prueba: monday4.jpeg
+La detección de la palabra epositokooe IT'S en la imagen de prueba es menor a 97% 
+--------------------------------------------------------------------------------------------- 
+2020-11-12 18:11:19.475580,   IMG control: monday.png,  IMG prueba: monday4.jpeg
+La detección de la palabra ositohoto en la imagen de prueba es menor a 90.0% 
+--------------------------------------------------------------------------------------------- 
+2020-11-12 18:11:48.678627,   IMG control: monday.png,  IMG prueba: monday2.jpeg
+La detección de la palabra Liin en la imagen de prueba es menor a 90.0% 
+--------------------------------------------------------------------------------------------- 
+2020-11-12 18:12:08.983433,   IMG control: monday.png,  IMG prueba: monday3.jpeg
+Resultado: True
+-----------------------------------------------------------------------------------------
+2020-11-12 18:13:12.625374,   IMG control: monday.png,  IMG prueba: monday4.jpeg
+La detección de la palabra ositohoto en la imagen de prueba es menor a 90.0% 
+--------------------------------------------------------------------------------------------- 

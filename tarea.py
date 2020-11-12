@@ -1,6 +1,9 @@
 import boto3
 import re
 import argparse
+from datetime import datetime
+
+confidence = 90.0
 
 def credentials():
   
@@ -25,10 +28,9 @@ def detect_text(photo, bucket, credentials):
 
     return textDetections
 
-def comparar(textDetect0, textDetect1):
+def comparar(textDetect0, textDetect1, log):
     words0 = [] #palabras en la imagen de control
     words1 = [] #palabras en la imagen a comparar
-    
     
     for text in textDetect0:
         if (" " in text['DetectedText']):
@@ -39,8 +41,10 @@ def comparar(textDetect0, textDetect1):
             words0.append((text['DetectedText']).lower()) #agregar palabra por palabra en minúscula
 
     for text in textDetect1:
-        if (text['Confidence'] < 97.0): #verificar que cada confidence sea mayor al 97%
-            print("La detección de la palabra " + text['DetectedText'] + " es menor a 97%")
+        if (text['Confidence'] < confidence): #verificar que cada confidence sea mayor al parámetro
+            print("La detección de la palabra " + text['DetectedText'] + " es menor a "+ str(confidence) +"% \n")
+            log.write("La detección de la palabra " + text['DetectedText'] + " en la imagen de prueba es menor a "+ str(confidence) +"% \n")
+            log.write("--------------------------------------------------------------------------------------------- \n")
             return False
         if (" " in text['DetectedText']):
             aux = text['DetectedText'].split()
@@ -56,24 +60,33 @@ def comparar(textDetect0, textDetect1):
             words1[i] = new_word
 
     #verificar si todas las palabras de words0 están en words1
+    flag = True
     for word in words0:
         if (word not in words1):
-            return False
-    return True
+            return flag
+    log.write("Resultado: "+ str(flag) +"\n")
+    log.write("-----------------------------------------------------------------------------------------\n")
+    return flag
 
 def main():
+    log = open("logs.txt","a")
+    now = datetime.now()
+    now = str(now)
 
     bucket=str(input("Ingrese nombre del bucket: "))
     photo0=str(input("Ingrese nombre de imagen de control: "))
 
     photo1=str(input("Ingrese nombre de imagen de prueba: "))
 
+    log.write(now + ",   IMG control: "+ photo0 + ",  IMG prueba: "+ photo1+"\n")
+
     cred = credentials()
 
     text_count0=detect_text(photo0, bucket, cred)
     text_count1=detect_text(photo1, bucket, cred)
 
-    print (comparar(text_count0, text_count1))
+    print (comparar(text_count0, text_count1, log))
+    log.close()
 
 if __name__ == "__main__":
     
