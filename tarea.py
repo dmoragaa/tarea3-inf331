@@ -3,7 +3,7 @@ import re
 import argparse
 from datetime import datetime
 
-confidence = 90.0
+CONFIDENCE = 90.0
 
 def credentials():
   
@@ -21,7 +21,7 @@ def detect_text(photo, bucket, credentials):
         aws_access_key_id=credentials.awsid,
         aws_secret_access_key=credentials.awskey
     )
-
+    print ("Detectando texto en imagen " + photo)
     response=client.detect_text(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
                         
     textDetections=response['TextDetections']
@@ -41,9 +41,9 @@ def comparar(textDetect0, textDetect1, log):
             words0.append((text['DetectedText']).lower()) #agregar palabra por palabra en minúscula
 
     for text in textDetect1:
-        if (text['Confidence'] < confidence): #verificar que cada confidence sea mayor al parámetro
-            print("La detección de la palabra " + text['DetectedText'] + " es menor a "+ str(confidence) +"% \n")
-            log.write("La detección de la palabra " + text['DetectedText'] + " en la imagen de prueba es menor a "+ str(confidence) +"% \n")
+        if ((text['Confidence'] < CONFIDENCE) and ('ParentId' in text)): #verificar que cada confidence sea mayor al parámetro
+            print("La confianza de detección de la palabra " + text['DetectedText'] + " es menor a "+ str(CONFIDENCE) +"% \n")
+            log.write("La confianza de detección de la palabra " + text['DetectedText'] + " en la imagen de prueba es menor a "+ str(CONFIDENCE) +"% \n")
             log.write("--------------------------------------------------------------------------------------------- \n")
             return False
         if (" " in text['DetectedText']):
@@ -73,8 +73,13 @@ def main():
     now = datetime.now()
     now = str(now)
 
+    """
     bucket=str(input("Ingrese nombre del bucket: "))
     photo0=str(input("Ingrese nombre de imagen de control: "))
+    """
+
+    bucket='bucket-tarea-psw'
+    photo0='monday.png'
 
     photo1=str(input("Ingrese nombre de imagen de prueba: "))
 

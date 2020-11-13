@@ -25,3 +25,27 @@ Resultado: True
 2020-11-12 18:13:12.625374,   IMG control: monday.png,  IMG prueba: monday4.jpeg
 La detección de la palabra ositohoto en la imagen de prueba es menor a 90.0% 
 --------------------------------------------------------------------------------------------- 
+2020-11-13 15:53:49.331159,   IMG control: monday.png,  IMG prueba: monday1.jpeg
+Resultado: True
+-----------------------------------------------------------------------------------------
+2020-11-13 15:54:09.879278,   IMG control: monday.png,  IMG prueba: monday2.jpeg
+2020-11-13 15:56:34.000394,   IMG control: monday.png,  IMG prueba: monday2.jpeg
+La detección de la palabra 9 en la imagen de prueba es menor a 90.0% 
+--------------------------------------------------------------------------------------------- 
+2020-11-13 16:07:33.192332,   IMG control: monday.png,  IMG prueba: monday3.jpeg
+Resultado: True
+-----------------------------------------------------------------------------------------
+2020-11-13 16:07:47.303351,   IMG control: monday.png,  IMG prueba: monday4.jpeg
+La detección de la palabra epositokooe en la imagen de prueba es menor a 90.0% 
+--------------------------------------------------------------------------------------------- 
+2020-11-13 16:08:59.204232,   IMG control: monday.png,  IMG prueba: monday5.jpeg
+2020-11-13 16:09:21.495763,   IMG control: monday.png,  IMG prueba: monday5.jpeg
+2020-11-13 16:17:33.105135,   IMG control: monday.png,  IMG prueba: monday5.png
+Resultado: True
+-----------------------------------------------------------------------------------------
+2020-11-13 16:17:53.076839,   IMG control: monday.png,  IMG prueba: monday6.jpeg
+Resultado: True
+-----------------------------------------------------------------------------------------
+2020-11-13 16:19:20.527192,   IMG control: monday.png,  IMG prueba: monday6.jpeg
+Resultado: True
+-----------------------------------------------------------------------------------------

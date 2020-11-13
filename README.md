@@ -20,5 +20,4 @@ $ Ingrese nombre de imagen de control: monday.png
 $ Ingrese nombre de imagen de prueba: monday1.jpeg
 ~~~
 
-### Work in progress
-* Generación de logs.
+Los logs se registran en el archivo `logs.txt`.
