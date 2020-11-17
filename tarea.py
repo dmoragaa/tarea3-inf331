@@ -65,7 +65,7 @@ def comparar(textDetect0, textDetect1, log):
         if (word not in words1):
             return flag
     log.write("Resultado: "+ str(flag) +"\n")
-    log.write("-----------------------------------------------------------------------------------------\n")
+    log.write("--------------------------------------------------------------------------------------------- \n")
     return flag
 
 def main():
@@ -73,14 +73,14 @@ def main():
     now = datetime.now()
     now = str(now)
 
-    """
+    
     bucket=str(input("Ingrese nombre del bucket: "))
     photo0=str(input("Ingrese nombre de imagen de control: "))
+    
     """
-
     bucket='bucket-tarea-psw'
     photo0='monday.png'
-
+    """
     photo1=str(input("Ingrese nombre de imagen de prueba: "))
 
     log.write(now + ",   IMG control: "+ photo0 + ",  IMG prueba: "+ photo1+"\n")
