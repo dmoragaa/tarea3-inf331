@@ -53,6 +53,7 @@ def comparar(textDetect0, textDetect1, log):
         else:
             words1.append((text['DetectedText']).lower()) #agregamos palabra por palabra en minúscula
 
+    #se eliminan los símbolos y carácteres especiales
     for word in words1:
         new_word = re.sub(r'[!@#$%^&*()\./<>?|`_+]', '', word)
         if (word != new_word):
@@ -63,7 +64,7 @@ def comparar(textDetect0, textDetect1, log):
     flag = True
     for word in words0:
         if (word not in words1):
-            return flag
+            flag = False
     log.write("Resultado: "+ str(flag) +"\n")
     log.write("--------------------------------------------------------------------------------------------- \n")
     return flag
@@ -73,14 +74,14 @@ def main():
     now = datetime.now()
     now = str(now)
 
-    
+    """
     bucket=str(input("Ingrese nombre del bucket: "))
     photo0=str(input("Ingrese nombre de imagen de control: "))
-    
     """
-    bucket='bucket-tarea-psw'
-    photo0='monday.png'
-    """
+#--------------------------------Modificar para hacer pruebas----------------------------------------
+    bucket='bucket-tarea-psw'  #bucket
+    photo0='monday.png'        #imagen de control
+#----------------------------------------------------------------------------------------------------
     photo1=str(input("Ingrese nombre de imagen de prueba: "))
 
     log.write(now + ",   IMG control: "+ photo0 + ",  IMG prueba: "+ photo1+"\n")

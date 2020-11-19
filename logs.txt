@@ -49,3 +49,24 @@ Resultado: True
 2020-11-13 16:19:20.527192,   IMG control: monday.png,  IMG prueba: monday6.jpeg
 Resultado: True
 -----------------------------------------------------------------------------------------
+2020-11-18 21:50:49.003854,   IMG control: monday.png,  IMG prueba: monday1.jpg
+2020-11-18 21:51:57.269632,   IMG control: monday.png,  IMG prueba: monday1.jpg
+2020-11-18 21:53:29.313242,   IMG control: monday.png,  IMG prueba: monday1.jpg
+Resultado: True
+--------------------------------------------------------------------------------------------- 
+2020-11-18 21:53:56.164078,   IMG control: monday.png,  IMG prueba: monday2.png
+Resultado: True
+--------------------------------------------------------------------------------------------- 
+2020-11-18 21:54:16.983619,   IMG control: monday.png,  IMG prueba: monday4.jpg
+Resultado: True
+--------------------------------------------------------------------------------------------- 
+2020-11-18 21:54:35.202710,   IMG control: monday.png,  IMG prueba: monday5.jpg
+2020-11-18 21:56:07.089798,   IMG control: monday.png,  IMG prueba: monday5.jpg
+Resultado: False
+--------------------------------------------------------------------------------------------- 
+2020-11-18 21:56:31.706455,   IMG control: monday.png,  IMG prueba: images.jpg
+Resultado: False
+--------------------------------------------------------------------------------------------- 
+2020-11-18 22:00:57.427525,   IMG control: monday.png,  IMG prueba: monday.png
+Resultado: True
+--------------------------------------------------------------------------------------------- 
