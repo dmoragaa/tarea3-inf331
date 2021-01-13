@@ -74,13 +74,13 @@ def main():
     now = datetime.now()
     now = str(now)
 
-    """
+    
     bucket=str(input("Ingrese nombre del bucket: "))
     photo0=str(input("Ingrese nombre de imagen de control: "))
-    """
+    
 #--------------------------------Modificar para hacer pruebas----------------------------------------
-    bucket='bucket-tarea-psw'  #bucket
-    photo0='monday.png'        #imagen de control
+    #bucket='bucket-tarea-psw'  #bucket
+    #photo0='monday.png'        #imagen de control
 #----------------------------------------------------------------------------------------------------
     photo1=str(input("Ingrese nombre de imagen de prueba: "))
 
